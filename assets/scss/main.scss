@@ -1,0 +1,232 @@
+@import 'compass/css3';
+
+*{
+	&,
+  &:hover,
+  &:active,
+  &:focus, 
+  &:visited{
+    outline: none !important;
+  }
+}
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.page{
+	$self: &;
+	&--home{
+		min-height: 320px;
+		// overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		#{$self}__wrapper{
+
+		}
+	}
+	&--full-size{
+		// width: 100vw;
+		// height: 100vh;
+	}
+	&--has-bg-image{
+		@include background-size(cover);
+	  background: {
+	    position: 50% 50%;
+	    repeat: no-repeat;
+	    image: url('../img/bg--sm.png');
+	  };
+	  @media (min-width: 768px){
+	  	background: {
+		    image: url('../img/bg--lg.png');
+		  };
+	  }
+	}
+}
+
+.home{
+	&__logo{
+		//
+	}
+	&__socials{
+		position: relative;
+		z-index: 50;
+		font-size: 0;
+		text-align: center;
+		@media (min-width: 1440px){
+			z-index: 10;
+			margin-top: -156px;
+		}
+	}
+	&__icons{
+		width: 320px;
+		margin: 12px auto;
+		@media (min-width: 480px){
+			width: 400px;
+		}
+		@media (min-width: 768px){
+			width: 560px;
+		}
+		@media (min-width: 992px){
+			width: 800px;
+		}
+		@media (min-width: 1200px){
+			width: 960px;
+		}
+		@media (min-width: 1440px){
+			margin-top: 120px;
+			width: 1120px;
+		}
+	}
+	&__actions{
+		font-size: 0;
+		text-align: center;
+		margin-top: 24px;
+		@media (min-width: 1440px){
+			margin-top: 48px;
+		}
+		.action-wrapper{
+			margin-bottom: 12px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+			@media (min-width: 768px){
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 6px;
+			}
+			@media (min-width: 1440px){
+				margin: 0 12px;
+			}
+		}
+			
+	}
+}
+
+.x69{
+	&-logo{
+		display: block;
+		width: 110px;
+		height: 102px;
+		margin: 0 auto 10px;
+		position: relative;
+		z-index: 60;
+		@media (min-width: 1440px){
+			width: 257px;
+			height: 239px;
+		}
+	}
+	&-btn{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 16px;
+		&--social{
+			height: 32px;
+			margin-right: 8px;
+			font-size: 16px;
+			&:last-child{
+				margin-right: none;
+			}
+			@media (min-width: 1440px){
+				height: 72px;
+				margin-right: 360px;
+				&:last-child{
+					margin: 0;
+				}
+			}
+		}
+		&--action{
+			height: 36px;
+			margin-right: 12px;
+			&:last-child{
+				margin-right: 0 !important;
+			}
+			@media (min-width: 1440px){
+				margin-right: 24px;
+				height: 72px;
+			}
+		}
+	}
+	&-icon-slider{
+		position: relative;
+		padding-bottom: 20px;
+		@media (min-width: 1440px){
+			padding-bottom: 32px;
+		}
+		.slick-dots{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			position: absolute;
+			bottom: -20px;
+			left: 50%;
+			@include translateX(-50%);
+			@media (min-width: 1440px){
+				bottom: -32px;
+			}
+			li{
+				display: inline-block;
+				line-height: 16px;
+				margin: 2px;
+				button{
+					display: block;
+					width: 8px;
+					height: 8px;
+					margin: 0;
+				  padding: 0;
+				  border: none;
+				 	@include background-size(contain);
+				  background: {
+				  	color: transparent;
+				    position: 50% 50%;
+				    repeat: no-repeat;
+				    image: url('../img/slider--inactive.png');
+				  };
+				  @media (min-width: 1440px){
+						width: 18px;
+						height: 18px;
+					}
+				}
+				&.slick-active{
+					button{
+						background: {
+							image: url('../img/slider--active.png');
+						};
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal{
+	&--download-action{
+		.modal-content{
+			padding: 24px 0;
+			background-color: rgba(#000,.5);
+			border-radius: 24px;
+		}
+		.modal-dialog{
+		  width: 280px;
+			text-align: center;
+		 
+		  border: 3px solid #dadada;
+		  border-radius: 24px;
+		  @media (min-width: 768px){
+		  	width: 480px;
+		  }
+		}
+	}
+	.modal-action-wrapper{
+		.single-action{
+			margin-bottom: 24px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
