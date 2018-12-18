@@ -9,11 +9,13 @@ img {
 
 .page--home {
   min-height: 320px;
-  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.page--home .page__wrapper {
+  min-height: 540px;
 }
 .page--has-bg-image {
   -moz-background-size: cover;
@@ -33,8 +35,21 @@ img {
 .home__socials {
   position: relative;
   z-index: 50;
+  margin-bottom: 36px;
   font-size: 0;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .home__socials {
+    margin-top: -112px;
+    margin-bottom: 72px;
+  }
+}
+@media (min-width: 1200px) {
+  .home__socials {
+    margin-top: -128px;
+    margin-bottom: 80px;
+  }
 }
 @media (min-width: 1440px) {
   .home__socials {
@@ -44,7 +59,7 @@ img {
 }
 .home__icons {
   width: 320px;
-  margin: 12px auto;
+  margin: 0 auto;
 }
 @media (min-width: 480px) {
   .home__icons {
@@ -58,7 +73,7 @@ img {
 }
 @media (min-width: 992px) {
   .home__icons {
-    width: 800px;
+    width: 850px;
   }
 }
 @media (min-width: 1200px) {
@@ -69,13 +84,14 @@ img {
 @media (min-width: 1440px) {
   .home__icons {
     margin-top: 120px;
-    width: 1120px;
+    width: 960px;
   }
 }
 .home__actions {
   font-size: 0;
   text-align: center;
-  margin-top: 24px;
+  margin-top: 36px;
+  padding-bottom: 36px;
 }
 @media (min-width: 1440px) {
   .home__actions {
@@ -88,7 +104,7 @@ img {
 .home__actions .action-wrapper:last-child {
   margin-bottom: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .home__actions .action-wrapper {
     display: inline-block;
     vertical-align: top;
@@ -103,11 +119,23 @@ img {
 
 .x69-logo {
   display: block;
-  width: 110px;
-  height: 102px;
+  width: 138px;
+  height: 128px;
   margin: 0 auto 10px;
   position: relative;
   z-index: 60;
+}
+@media (min-width: 768px) {
+  .x69-logo {
+    width: 180px;
+    height: 167px;
+  }
+}
+@media (min-width: 1200px) {
+  .x69-logo {
+    width: 200px;
+    height: 186px;
+  }
 }
 @media (min-width: 1440px) {
   .x69-logo {
@@ -121,38 +149,97 @@ img {
   font-size: 16px;
 }
 .x69-btn--social {
-  height: 32px;
+  height: 38px;
   margin-right: 8px;
   font-size: 16px;
 }
 .x69-btn--social:last-child {
-  margin-right: none;
+  margin-right: 0 !important;
+}
+@media (min-width: 480px) {
+  .x69-btn--social {
+    height: 44px;
+  }
+}
+@media (min-width: 768px) {
+  .x69-btn--social {
+    height: 48px;
+    margin-right: 240px;
+  }
+}
+@media (min-width: 992px) {
+  .x69-btn--social {
+    height: 56px;
+  }
+}
+@media (min-width: 1200px) {
+  .x69-btn--social {
+    height: 64px;
+  }
 }
 @media (min-width: 1440px) {
   .x69-btn--social {
-    height: 72px;
     margin-right: 360px;
-  }
-  .x69-btn--social:last-child {
-    margin: 0;
   }
 }
 .x69-btn--action {
-  height: 36px;
+  height: 42px;
   margin-right: 12px;
 }
 .x69-btn--action:last-child {
   margin-right: 0 !important;
 }
-@media (min-width: 1440px) {
+@media (min-width: 480px) {
   .x69-btn--action {
-    margin-right: 24px;
-    height: 72px;
+    height: 44px;
+  }
+}
+@media (min-width: 768px) {
+  .x69-btn--action {
+    height: 48px;
+  }
+}
+@media (min-width: 992px) {
+  .x69-btn--action {
+    height: 56px;
+  }
+}
+@media (min-width: 1200px) {
+  .x69-btn--action {
+    height: 64px;
+  }
+}
+.x69-btn--modal-action {
+  height: 42px;
+}
+@media (min-width: 480px) {
+  .x69-btn--modal-action {
+    height: 44px;
+  }
+}
+@media (min-width: 768px) {
+  .x69-btn--modal-action {
+    height: 48px;
+  }
+}
+@media (min-width: 992px) {
+  .x69-btn--modal-action {
+    height: 56px;
+  }
+}
+@media (min-width: 1200px) {
+  .x69-btn--modal-action {
+    height: 64px;
   }
 }
 .x69-icon-slider {
   position: relative;
   padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .x69-icon-slider {
+    padding-bottom: 36px;
+  }
 }
 @media (min-width: 1440px) {
   .x69-icon-slider {
@@ -172,6 +259,11 @@ img {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+@media (min-width: 768px) {
+  .x69-icon-slider .slick-dots {
+    bottom: -26px;
+  }
+}
 @media (min-width: 1440px) {
   .x69-icon-slider .slick-dots {
     bottom: -32px;
@@ -182,9 +274,19 @@ img {
   line-height: 16px;
   margin: 2px;
 }
+@media (min-width: 768px) {
+  .x69-icon-slider .slick-dots li {
+    margin: 0 3px;
+  }
+}
+@media (min-width: 1440px) {
+  .x69-icon-slider .slick-dots li {
+    margin: 0 4px;
+  }
+}
 .x69-icon-slider .slick-dots li button {
   display: block;
-  width: 8px;
+  width: 9px;
   height: 8px;
   margin: 0;
   padding: 0;
@@ -198,9 +300,15 @@ img {
   background-repeat: no-repeat;
   background-image: url("../img/slider--inactive.png");
 }
+@media (min-width: 768px) {
+  .x69-icon-slider .slick-dots li button {
+    width: 13px;
+    height: 12px;
+  }
+}
 @media (min-width: 1440px) {
   .x69-icon-slider .slick-dots li button {
-    width: 18px;
+    width: 19px;
     height: 18px;
   }
 }
@@ -210,18 +318,47 @@ img {
 
 .modal--download-action .modal-content {
   padding: 24px 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 24px;
 }
 .modal--download-action .modal-dialog {
   width: 280px;
   text-align: center;
-  border: 3px solid #dadada;
+  margin: 0 auto;
+  border: 2px solid #dadada;
   border-radius: 24px;
+  opacity: 0;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 @media (min-width: 768px) {
   .modal--download-action .modal-dialog {
-    width: 480px;
+    width: 320px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal--download-action .modal-dialog {
+    width: 400px;
+  }
+}
+.modal--download-action.in .modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -140px;
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .modal--download-action.in .modal-dialog {
+    margin-left: -160px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal--download-action.in .modal-dialog {
+    margin-left: -200px;
   }
 }
 .modal .modal-action-wrapper .single-action {
@@ -229,4 +366,16 @@ img {
 }
 .modal .modal-action-wrapper .single-action:last-child {
   margin-bottom: 0;
+}
+.modal .modal-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 32px;
+  line-height: 32px;
+  font-size: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  border: 0;
 }
