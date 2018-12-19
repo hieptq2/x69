@@ -29,6 +29,9 @@ img {
     background-image: url("../img/bg--lg.png");
   }
 }
+.page__wrapper {
+  max-width: 100%;
+}
 
 .home__logo {
   padding-top: 12px;
@@ -59,17 +62,20 @@ img {
   }
 }
 .home__icons {
-  width: 300px;
+  max-width: 100%;
+  padding: 0 20px;
   margin: 0 auto;
 }
 @media (min-width: 480px) {
   .home__icons {
-    width: 400px;
+    max-width: 480px;
   }
 }
 @media (min-width: 768px) {
   .home__icons {
+    padding: 0 0;
     width: 560px;
+    max-width: none;
   }
 }
 @media (min-width: 992px) {
@@ -100,6 +106,7 @@ img {
   }
 }
 .home__actions .action-wrapper {
+  padding: 0 20px;
   margin-bottom: 12px;
   white-space: nowrap;
 }
@@ -111,6 +118,7 @@ img {
     display: inline-block;
     vertical-align: top;
     margin: 0 6px;
+    padding: 0;
   }
 }
 @media (min-width: 1440px) {
@@ -151,7 +159,7 @@ img {
   font-size: 16px;
 }
 .x69-btn--social {
-  height: 36px;
+  height: 44px;
   margin-right: 8px;
   font-size: 16px;
 }
@@ -160,12 +168,12 @@ img {
 }
 @media (min-width: 480px) {
   .x69-btn--social {
-    height: 44px;
+    height: 48px;
   }
 }
 @media (min-width: 768px) {
   .x69-btn--social {
-    height: 48px;
+    height: 52px;
     margin-right: 240px;
   }
 }
@@ -176,7 +184,7 @@ img {
 }
 @media (min-width: 1200px) {
   .x69-btn--social {
-    height: 64px;
+    height: 72px;
   }
 }
 @media (min-width: 1440px) {
@@ -185,20 +193,22 @@ img {
   }
 }
 .x69-btn--action {
-  height: 40px;
+  max-width: calc(50% - 12px);
+  height: auto;
   margin-right: 12px;
+  max-height: 48px;
 }
 .x69-btn--action:last-child {
   margin-right: 0 !important;
 }
 @media (min-width: 480px) {
   .x69-btn--action {
-    height: 44px;
+    height: 48px;
   }
 }
 @media (min-width: 768px) {
   .x69-btn--action {
-    height: 48px;
+    max-height: none;
   }
 }
 @media (min-width: 992px) {
