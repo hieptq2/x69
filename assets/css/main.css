@@ -12,8 +12,13 @@ img {
   min-height: 320px;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: space-around;
+}
+@media (min-height: 697px) {
+  .page--home {
+    padding: 0px;
+    align-items: center;
+  }
 }
 .page--has-bg-image {
   -moz-background-size: cover;
@@ -98,7 +103,7 @@ img {
   font-size: 0;
   text-align: center;
   margin-top: 36px;
-  padding-bottom: 36px;
+  padding-bottom: 56px;
 }
 @media (min-width: 1440px) {
   .home__actions {

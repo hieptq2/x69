@@ -1,10 +1,10 @@
 $(document).ready(function(){
   $('.x69-icon-slider .icon-slider-row').slick({
   	autoplay: true,
-  	autoplaySpeed: 2500,
+  	autoplaySpeed: 2000,
   	arrows: false,
   	dots: true,
-  	infinite: false,
+  	infinite: true,
   	pauseOnHover: false,
   	slidesToShow: 5,
 	  slidesToScroll: 5,

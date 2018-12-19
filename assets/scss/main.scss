@@ -24,8 +24,18 @@ img{
 		// height: 100vh;
 		min-height: 100vh;
 		display: flex;
-		align-items: center;
+		// align-items: center;
 		justify-content: space-around;
+		@media (min-height: 480px){
+			// padding-top: 12px;
+		}
+		@media (min-height: 600px){
+			// padding-top: 12px;
+		}
+		@media (min-height: 697px){
+			padding: 0px;
+			align-items: center;
+		}
 	}
 	&--full-size{
 		// width: 100vw;
@@ -99,7 +109,7 @@ img{
 		font-size: 0;
 		text-align: center;
 		margin-top: 36px;
-		padding-bottom: 36px;
+		padding-bottom: 56px;
 		@media (min-width: 1440px){
 			margin-top: 48px;
 		}
